@@ -1,6 +1,13 @@
 @charset "utf-8";
 
+html, body {
+  height: 100%;
+}
+
+
 body {
+  margin: 0;
+
   font-family: system, -apple-system, "Helvetica Neue", "Lucida Grande";
   text-align: center;
   font-weight: normal;
@@ -10,10 +17,35 @@ body {
     font-weight: normal;
   }
 
-  .steps {
+  // flex box all the things
+  .recipe {
+    height: 100%;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
+
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+
+    -webkit-justify-content: center;
+    justify-content: center;
+
   }
+}
+
+#mayo-pop-picture {
+  height: 50%;
+  min-height: 300px;
+  width: 50%;
+  margin: auto;
+
+  background-image: url("../images/mayonnaise.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 @import 'buttons'

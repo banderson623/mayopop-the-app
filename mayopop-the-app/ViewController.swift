@@ -10,6 +10,7 @@ import UIKit
 
 // Note UIWebViewDeligate, is a protocol (interface) that we are going to implement.
 // All the functions are optional overrides. We need this to detect
+
 class ViewController: UIViewController, UIWebViewDelegate {
   
   @IBOutlet weak var webView: UIWebView!
@@ -64,6 +65,39 @@ class ViewController: UIViewController, UIWebViewDelegate {
     }
     return result
   }
+
+  // This is sort of the magic here, this captures requests/links and does something with them.
+
+  // The protocol defined function for intercepting and inspecting
+  // url requests made from the UIWebView. Returning true will
+  // let the request be made, returning false cancels it.
+  //
+  // We use this to capture native calls!
+  //
+  func webView(webView: UIWebView,
+    shouldStartLoadWithRequest request: NSURLRequest,
+    navigationType nType: UIWebViewNavigationType) -> Bool {
+      let urlString = request.URL?.absoluteString
+      println("Request made: \(urlString)")
+//
+//      // If the string starts with 'ios:' then we know it is a call to a function here
+//      if (urlString!.substringToIndex(advance(urlString!.startIndex,4)) == "ios:") {
+//        let functionName = urlString!.substringFromIndex(advance(urlString!.startIndex,4))
+//        println("got an ios function call: \(functionName)")
+//
+//        switch functionName {
+//        case "helloWorld":helloWorld()
+//        default : println("UNHANDLED \(functionName)")
+//        }
+//
+//        // we do not want to actually leave the page when this is triggered
+//        return false
+//      }
+
+      // make sure real requests are requested
+      return true
+  }
+
 
 }
 
