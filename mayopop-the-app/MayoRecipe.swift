@@ -21,11 +21,7 @@ class MayoRecipe {
   }
 
   func onStepChange(newNumber: String){
-//    onStep = newNumber
-    println("Step changed \(newNumber)")
+    onStepChange(newNumber.toInt()!)
   }
 
-  func scheduleReminder(timeInMinutes: String){
-
-  }
 }

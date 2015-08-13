@@ -8,6 +8,9 @@
 
 import UIKit
 
+// for speech support
+import AVFoundation
+
 // Note UIWebViewDeligate, is a protocol (interface) that we are going to implement.
 // All the functions are optional overrides. We need this to detect
 
@@ -99,6 +102,9 @@ class ViewController: UIViewController, UIWebViewDelegate {
         case "remindMe":
           scheduleReminder(arguments[0], message: arguments[1]);
           break
+        case "say" :
+          speak(arguments[0])
+          break
         case "log":
           println("console.log \(arguments)")
           break
@@ -113,6 +119,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
       return true
   }
 
+  // Uses local notifications to remind the user to get their pops out!
   func scheduleReminder(timeInSeconds: String, message: String){
     println("sending message \(message) in \(timeInSeconds)");
     let seconds = NSTimeInterval(timeInSeconds.toInt()!)
@@ -121,6 +128,15 @@ class ViewController: UIViewController, UIWebViewDelegate {
     notification.fireDate = NSDate(timeIntervalSinceNow: seconds)
     notification.alertBody = message;
     UIApplication.sharedApplication().scheduleLocalNotification(notification)
+  }
+
+  func speak(thingToSay: String){
+    let decodedStatement = thingToSay.stringByReplacingOccurrencesOfString("%20", withString: " ", options: NSStringCompareOptions.LiteralSearch, range: nil)
+    println("Saying: \(decodedStatement)")
+    let synth = AVSpeechSynthesizer()
+    var instructions = AVSpeechUtterance(string: decodedStatement)
+    instructions.rate = 0.2
+    synth.speakUtterance(instructions)
   }
 
 }

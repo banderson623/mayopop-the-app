@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import 'fonts';
+
 @mixin flex-center {
   display: -webkit-flex;
   display: flex;
@@ -17,6 +19,11 @@
   -webkit-user-select: none;
 }
 
+$base-color: #06B3EB;
+$alt-color: #CBBA00;
+
+$body-font-color: darken($base-color,25%);
+
 html, body {
   height: 100%;
 }
@@ -27,11 +34,39 @@ body {
   font-family: system, -apple-system, "Helvetica Neue", "Lucida Grande";
   text-align: center;
   font-weight: normal;
+  color: $body-font-color;
+
+  background-image: url('../images/background.jpg');
+  background-size: contain;
 
   h1, h2 {
-    font-size: 1.5em;
+    color: darken($base-color,15%);
+    font-family: DancingScript;
+    font-size: 2em;
     font-weight: normal;
+    margin: auto 1em;
+
+    &.big {
+      font-size: 3em;
+    }
   }
+
+  h2 {
+    color: darken(#CBBA00,15%);
+    margin-bottom: 1em;
+  }
+
+  p {
+    margin: 5% 2em;
+    font-size:1.4em;
+    line-height: 1.5;
+
+    @media (max-width: 400px) {
+      font-size:1em;
+      line-height: 1.25;
+    }
+  }
+
 }
 
 // flex box all the things
@@ -46,19 +81,32 @@ body {
     left: 0;
     right: 0;
     bottom: 2rem;
+    z-index: 1;
   }
 }
 
 #mayo-pop-picture {
   height: 50%;
-  min-height: 300px;
+  min-height: 250px;
   width: 50%;
-  margin: auto;
+  margin: 3% auto;
 
   background-image: url("../images/mayonnaise.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+#speak-directions {
+  width:  64px;
+  height: 64px;
+  background-image: url("../images/speaker.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index:3;
 }
 
 @import 'steps';

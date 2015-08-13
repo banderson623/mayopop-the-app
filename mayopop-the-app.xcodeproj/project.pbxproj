@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B10F8ABD1B7CF16C00A504EC /* StringHtmlDecoderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10F8ABC1B7CF16C00A504EC /* StringHtmlDecoderExtension.swift */; };
+		B10F8ABF1B7CF2A000A504EC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B10F8ABE1B7CF2A000A504EC /* AVFoundation.framework */; };
 		B1C3B9E01B7C48FF00BD2EC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C3B9DF1B7C48FF00BD2EC2 /* AppDelegate.swift */; };
 		B1C3B9E21B7C48FF00BD2EC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C3B9E11B7C48FF00BD2EC2 /* ViewController.swift */; };
 		B1C3B9E51B7C48FF00BD2EC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C3B9E31B7C48FF00BD2EC2 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B10F8ABC1B7CF16C00A504EC /* StringHtmlDecoderExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringHtmlDecoderExtension.swift; sourceTree = "<group>"; };
+		B10F8ABE1B7CF2A000A504EC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B1C3B9DA1B7C48FF00BD2EC2 /* mayopop-the-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mayopop-the-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C3B9DE1B7C48FF00BD2EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1C3B9DF1B7C48FF00BD2EC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B10F8ABF1B7CF2A000A504EC /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +69,8 @@
 		B1C3B9D11B7C48FF00BD2EC2 = {
 			isa = PBXGroup;
 			children = (
+				B10F8ABE1B7CF2A000A504EC /* AVFoundation.framework */,
+				B10F8ABC1B7CF16C00A504EC /* StringHtmlDecoderExtension.swift */,
 				B1C3BA081B7C7A4900BD2EC2 /* NotificationCenter.framework */,
 				B1C3B9DC1B7C48FF00BD2EC2 /* mayopop-the-app */,
 				B1C3B9F21B7C48FF00BD2EC2 /* mayopop-the-appTests */,
@@ -239,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B10F8ABD1B7CF16C00A504EC /* StringHtmlDecoderExtension.swift in Sources */,
 				B1C3BA071B7C6FE900BD2EC2 /* MayoRecipe.swift in Sources */,
 				B1C3B9E21B7C48FF00BD2EC2 /* ViewController.swift in Sources */,
 				B1C3B9E01B7C48FF00BD2EC2 /* AppDelegate.swift in Sources */,
@@ -439,6 +447,7 @@
 				B1C3B9FB1B7C48FF00BD2EC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B1C3B9FC1B7C48FF00BD2EC2 /* Build configuration list for PBXNativeTarget "mayopop-the-appTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +456,7 @@
 				B1C3B9FE1B7C48FF00BD2EC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

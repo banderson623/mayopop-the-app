@@ -1,0 +1,14 @@
+<article>
+  <h1>Step 5:</h1>
+  <p>Throw that disaster in the freezer.</p>
+  <button class="remind-me">Remind me to get pops</button>
+</article>
+
+<script type="text/javascript">
+  // When the button is pressed, call a native method
+  $('button.remind-me')[0].addEventListener('click',function(){
+    callNative('remindMe', 25, "Time for pops!!");
+  });
+</script>
+
+

@@ -3,6 +3,7 @@ title: Mayopop
 ---
 
 <div class="recipe">
+  <a id="speak-directions"></a>
   <% include_steps(File.join(File.dirname(__FILE__),'steps/*')).each_with_index do |f,index| %>
     <section class="step"  data-step-index="<%=index + 1%>">
       <section class="step-content"  data-step-index="<%=index + 1%>">

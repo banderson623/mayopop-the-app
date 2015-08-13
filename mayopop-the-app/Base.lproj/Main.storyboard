@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" mediaPlaybackAllowsAirPlay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z90-uI-9Vt">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="-4" y="0.0" width="608" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
                             </webView>
@@ -26,9 +26,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="z90-uI-9Vt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Vsx-PC-Dcd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="z90-uI-9Vt" secondAttribute="trailing" constant="-16" id="bhE-Nm-yK2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z90-uI-9Vt" secondAttribute="trailing" constant="-20" id="bhE-Nm-yK2"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="z90-uI-9Vt" secondAttribute="bottom" id="n3u-Fq-d11"/>
-                            <constraint firstItem="z90-uI-9Vt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="waV-U1-kYt"/>
+                            <constraint firstItem="z90-uI-9Vt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="waV-U1-kYt"/>
                         </constraints>
                     </view>
                     <connections>

@@ -1,15 +1,23 @@
 //= require_tree .
 
-// emulate jquery
-$ = function(q){ return document.querySelectorAll(q);};
+// emulate jquery for selecting things
+$ = function(q){return document.querySelectorAll(q);};
 
+// Returns true if in an iOS / OS X Webview
 inWebview = function(){
   var isInUIwebview = /(iPhone|iPod|iPad).*AppleWebKit(?!.*Safari)/i.test(navigator.userAgent);
   return isInUIwebview;
 };
 
+// When in a webview this will trigger a native call
 callNative = function(func){
   var args = Array.prototype.slice.call(arguments);
+
+  // Encode this nicely
+  // args.forEach(function(element,index){
+  //   args[index] = encodeURIComponent(element);
+  // });
+
   var url = 'ios:' + func + ':' + args.slice(1).join(':');
   if(inWebview()){
     window.location  = url;
@@ -24,6 +32,13 @@ if(inWebview()){
     callNative('log', Array.prototype.slice.call(arguments));
   };
 }
+
+// Prevent scrolling on the document
+window.addEventListener("touchmove", function(event) {
+  if (!event.target.classList.contains('scrollable')) {
+    event.preventDefault();
+  }
+}, false);
 
 // var fireCustomEvent = function (name){
 //   var data = arguments[1] || [];
