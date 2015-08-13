@@ -13,6 +13,7 @@
 		B1C3B9E71B7C48FF00BD2EC2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1C3B9E61B7C48FF00BD2EC2 /* Images.xcassets */; };
 		B1C3B9EA1B7C48FF00BD2EC2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C3B9E81B7C48FF00BD2EC2 /* LaunchScreen.xib */; };
 		B1C3B9F61B7C48FF00BD2EC2 /* mayopop_the_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C3B9F51B7C48FF00BD2EC2 /* mayopop_the_appTests.swift */; };
+		B1C3BA001B7C52EB00BD2EC2 /* build in Resources */ = {isa = PBXBuildFile; fileRef = B1C3B9FF1B7C52EB00BD2EC2 /* build */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		B1C3B9EF1B7C48FF00BD2EC2 /* mayopop-the-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mayopop-the-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C3B9F41B7C48FF00BD2EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1C3B9F51B7C48FF00BD2EC2 /* mayopop_the_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mayopop_the_appTests.swift; sourceTree = "<group>"; };
+		B1C3B9FF1B7C52EB00BD2EC2 /* build */ = {isa = PBXFileReference; lastKnownFileType = folder; name = build; path = mayopop_html/build; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		B1C3B9DC1B7C48FF00BD2EC2 /* mayopop-the-app */ = {
 			isa = PBXGroup;
 			children = (
+				B1C3B9FF1B7C52EB00BD2EC2 /* build */,
 				B1C3B9DF1B7C48FF00BD2EC2 /* AppDelegate.swift */,
 				B1C3B9E11B7C48FF00BD2EC2 /* ViewController.swift */,
 				B1C3B9E31B7C48FF00BD2EC2 /* Main.storyboard */,
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1C3B9E51B7C48FF00BD2EC2 /* Main.storyboard in Resources */,
+				B1C3BA001B7C52EB00BD2EC2 /* build in Resources */,
 				B1C3B9EA1B7C48FF00BD2EC2 /* LaunchScreen.xib in Resources */,
 				B1C3B9E71B7C48FF00BD2EC2 /* Images.xcassets in Resources */,
 			);

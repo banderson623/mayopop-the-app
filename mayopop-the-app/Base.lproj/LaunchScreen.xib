@@ -11,6 +11,10 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.34999999999999964" contentMode="center" fixedFrame="YES" image="mayonnaise.png" translatesAutoresizingMaskIntoConstraints="NO" id="OnI-Pq-6uB">
+                    <rect key="frame" x="96" y="23" width="273" height="434"/>
+                    <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="0.5"/>
+                </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2015 Brian Anderson. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
                     <rect key="frame" x="20" y="439" width="441" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -44,4 +48,7 @@
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="mayonnaise.png" width="273" height="434"/>
+    </resources>
 </document>
