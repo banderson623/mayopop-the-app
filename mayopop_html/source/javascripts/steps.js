@@ -18,6 +18,7 @@ var Steps = {
       this.at = this.at+ 1;
       this.hideAllSteps();
       this.steps[this.at].classList.remove('hidden');
+      callNative('step', this.at);
     }
   }
 
@@ -25,7 +26,7 @@ var Steps = {
 
 document.addEventListener("DOMContentLoaded", function(event) {
   Steps.init();
-
+  console.log("initializing!");
   var nextButtons = $('button.next');
   for(var i = 0; i < nextButtons.length; i++){
     var button = nextButtons[i];

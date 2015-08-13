@@ -16,7 +16,8 @@ class ViewController: UIViewController, UIWebViewDelegate {
   @IBOutlet weak var webView: UIWebView!
 
   var webViewIsLoaded = false;
-  var javascriptQueue = [String]();
+  var javascriptQueue = [String]()
+  var myMayoRecipe = MayoRecipe()
 
   // required functions for all iOS views
   override func viewDidLoad() {
@@ -44,7 +45,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
     }
   }
 
-  // Lets load up the index page, from the built location
+  // Lets load up the index page, from the build location
   func loadIndexPage(){
     let localfilePath = NSBundle.mainBundle().URLForResource("index", withExtension: "html", subdirectory: "build")
     let request = NSURLRequest(URL: localfilePath!)
@@ -78,21 +79,32 @@ class ViewController: UIViewController, UIWebViewDelegate {
     shouldStartLoadWithRequest request: NSURLRequest,
     navigationType nType: UIWebViewNavigationType) -> Bool {
       let urlString = request.URL?.absoluteString
-      println("Request made: \(urlString)")
-//
-//      // If the string starts with 'ios:' then we know it is a call to a function here
-//      if (urlString!.substringToIndex(advance(urlString!.startIndex,4)) == "ios:") {
-//        let functionName = urlString!.substringFromIndex(advance(urlString!.startIndex,4))
+
+      // If the string starts with 'ios:' then we know it is a call to a function here
+      if (urlString!.substringToIndex(advance(urlString!.startIndex,4)) == "ios:") {
+        let slicedURL = urlString!.componentsSeparatedByString(":")
+        // Using the convention of ios:<function name>:<argument 1>:<argument 2>:...
+        // we can pluck these out
+        let functionName:String = slicedURL[1];
+        let arguments: Array<String> = Array(slicedURL[2..<slicedURL.count])
+
 //        println("got an ios function call: \(functionName)")
-//
-//        switch functionName {
-//        case "helloWorld":helloWorld()
-//        default : println("UNHANDLED \(functionName)")
-//        }
-//
-//        // we do not want to actually leave the page when this is triggered
-//        return false
-//      }
+//        println("with arguments: \(arguments)")
+
+        switch functionName {
+        case "step":
+          myMayoRecipe.onStepChange(arguments[0])
+          executeJS("console.log(\"got it\")")
+          break
+        case "log":
+          println("console.log \(arguments)")
+          break
+        default : println("UNHANDLED \(functionName) (\(urlString))")
+        }
+
+        // we do not want to actually leave the page when this is triggered
+        return false
+      }
 
       // make sure real requests are requested
       return true
