@@ -122,8 +122,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1C3B9F91B7C48FF00BD2EC2 /* Build configuration list for PBXNativeTarget "mayopop-the-app" */;
 			buildPhases = (
-				B1C3B9D61B7C48FF00BD2EC2 /* Sources */,
+				B1C3BA051B7C629E00BD2EC2 /* Build Middleman */,
 				B1C3B9D71B7C48FF00BD2EC2 /* Frameworks */,
+				B1C3B9D61B7C48FF00BD2EC2 /* Sources */,
 				B1C3B9D81B7C48FF00BD2EC2 /* Resources */,
 			);
 			buildRules = (
@@ -210,6 +211,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B1C3BA051B7C629E00BD2EC2 /* Build Middleman */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Middleman";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "eval \"$(/usr/local/bin/rbenv init -)\" && cd mayopop_html && bundle exec middleman build";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B1C3B9D61B7C48FF00BD2EC2 /* Sources */ = {
