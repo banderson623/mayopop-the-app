@@ -1,9 +1,25 @@
 @charset "utf-8";
 
+@mixin flex-center {
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+@mixin no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
 html, body {
   height: 100%;
 }
-
 
 body {
   margin: 0;
@@ -16,23 +32,20 @@ body {
     font-size: 1.5em;
     font-weight: normal;
   }
+}
 
-  // flex box all the things
-  .recipe {
-    height: 100%;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
+// flex box all the things
+.recipe {
+  height: 100%;
+  @include no-select;
 
-    display: -webkit-flex;
-    display: flex;
-
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    align-items: center;
-
-    -webkit-justify-content: center;
-    justify-content: center;
-
+  .step-content {
+    @include flex-center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 2rem;
   }
 }
 

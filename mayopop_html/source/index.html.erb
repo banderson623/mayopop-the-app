@@ -4,9 +4,11 @@ title: Mayopop
 
 <div class="recipe">
   <% include_steps(File.join(File.dirname(__FILE__),'steps/*')).each_with_index do |f,index| %>
-    <div class="step"  data-step-index="<%=index + 1%>">
-      <%= partial 'steps/'+f, :locals => {step: index + 1} %>
-    </div>
-    <button class="next" data-next-index="<%=index + 1%>">Next</button>
+    <section class="step"  data-step-index="<%=index + 1%>">
+      <section class="step-content"  data-step-index="<%=index + 1%>">
+        <%= partial 'steps/'+f, :locals => {step: index + 1} %>
+      </section>
+      <button class="next" data-next-index="<%=index + 1%>">Next</button>
+    </section>
   <% end %>
 </div>
