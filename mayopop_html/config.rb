@@ -36,16 +36,21 @@
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
+configure :development do
+  activate :livereload
+end
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  # A small utility to load steps in order from the directory
+  def include_steps(steps_directory = nil)
+    puts "including steps from #{steps_directory}"
+    files = Dir.glob(steps_directory)
+    steps = files.collect{|f| File.basename(f).gsub(/^_/,'')}.sort
+    puts "   found: " + steps.map{|f| File.basename(f)}.join(', ')
+    steps.select{|f| f.end_with?('html.erb')}
+  end
+end
 
 set :css_dir, 'stylesheets'
 

@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+body {
+  font-family: system, -apple-system, "Helvetica Neue", "Lucida Grande";
+  text-align: center;
+  font-weight: normal;
+
+  h1, h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+  }
+
+  .steps {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+  }
+}
+
+@import 'buttons'

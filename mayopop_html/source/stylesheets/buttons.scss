@@ -1,0 +1,29 @@
+button {
+  margin:2rem auto;
+  display:block;
+  width: 50%;
+  padding: 1rem;
+  font-size:2rem;
+  background-color:#06B3EB;
+  border:0;
+  color: #fff;
+  box-shadow: 5px 5px 0 #035E7B;
+  border-radius: 5px;
+  outline: 0;
+  cursor: pointer;
+
+  &:active {
+    -webkit-transform: translateX(5px) translateY(5px);
+    -webkit-transition: -webkit-transform 0.25s;
+    -webkit-transition: -box-shadow 0.1s;
+    box-shadow: 0 0 0 #035E7B;
+  }
+
+  &.next {
+    position:absolute;
+    bottom: 0;
+    margin-bottom: 15px;
+    left: 25%;
+  }
+
+}
