@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,13 +17,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" mediaPlaybackAllowsAirPlay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z90-uI-9Vt">
+                            <webView contentMode="scaleToFill" mediaPlaybackAllowsAirPlay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z90-uI-9Vt">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z90-uI-9Vt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Vsx-PC-Dcd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z90-uI-9Vt" secondAttribute="trailing" constant="-16" id="bhE-Nm-yK2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="z90-uI-9Vt" secondAttribute="bottom" id="n3u-Fq-d11"/>
+                            <constraint firstItem="z90-uI-9Vt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="waV-U1-kYt"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="webView" destination="z90-uI-9Vt" id="1g3-MJ-lT5"/>
