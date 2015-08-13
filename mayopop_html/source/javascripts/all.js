@@ -13,11 +13,6 @@ inWebview = function(){
 callNative = function(func){
   var args = Array.prototype.slice.call(arguments);
 
-  // Encode this nicely
-  // args.forEach(function(element,index){
-  //   args[index] = encodeURIComponent(element);
-  // });
-
   var url = 'ios:' + func + ':' + args.slice(1).join(':');
   if(inWebview()){
     window.location  = url;

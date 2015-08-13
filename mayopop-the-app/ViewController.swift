@@ -46,6 +46,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
     for javascript in javascriptQueue {
       executeJS(javascript)
     }
+
   }
 
   // Lets load up the index page, from the build location
@@ -85,14 +86,17 @@ class ViewController: UIViewController, UIWebViewDelegate {
 
       // If the string starts with 'ios:' then we know it is a call to a function here
       if (urlString!.substringToIndex(advance(urlString!.startIndex,4)) == "ios:") {
+
         let slicedURL = urlString!.componentsSeparatedByString(":")
+
         // Using the convention of ios:<function name>:<argument 1>:<argument 2>:...
         // we can pluck these out
         let functionName:String = slicedURL[1];
         let arguments: Array<String> = Array(slicedURL[2..<slicedURL.count])
 
-//        println("got an ios function call: \(functionName)")
-//        println("with arguments: \(arguments)")
+        // Debug some stuff here on the console
+        println("got an ios function call: \(functionName)")
+        println("with arguments: \(arguments)")
 
         switch functionName {
         case "step":
