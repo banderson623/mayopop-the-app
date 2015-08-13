@@ -44,10 +44,10 @@ end
 helpers do
   # A small utility to load steps in order from the directory
   def include_steps(steps_directory = nil)
-    puts "including steps from #{steps_directory}"
+    # puts "including steps from #{steps_directory}"
     files = Dir.glob(steps_directory)
     steps = files.collect{|f| File.basename(f).gsub(/^_/,'')}.sort
-    puts "   found: " + steps.map{|f| File.basename(f)}.join(', ')
+    # puts "   found: " + steps.map{|f| File.basename(f)}.join(', ')
     steps.select{|f| f.end_with?('html.erb')}
   end
 end
