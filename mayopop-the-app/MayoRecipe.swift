@@ -19,8 +19,13 @@ class MayoRecipe {
     onStep = newNumber
     println("Step changed \(onStep)")
   }
+
   func onStepChange(newNumber: String){
 //    onStep = newNumber
     println("Step changed \(newNumber)")
+  }
+
+  func scheduleReminder(timeInMinutes: String){
+
   }
 }

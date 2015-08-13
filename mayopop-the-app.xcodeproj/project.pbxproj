@@ -40,6 +40,7 @@
 		B1C3B9F51B7C48FF00BD2EC2 /* mayopop_the_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mayopop_the_appTests.swift; sourceTree = "<group>"; };
 		B1C3B9FF1B7C52EB00BD2EC2 /* build */ = {isa = PBXFileReference; lastKnownFileType = folder; name = build; path = mayopop_html/build; sourceTree = SOURCE_ROOT; };
 		B1C3BA061B7C6FE900BD2EC2 /* MayoRecipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MayoRecipe.swift; sourceTree = "<group>"; };
+		B1C3BA081B7C7A4900BD2EC2 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 		B1C3B9D11B7C48FF00BD2EC2 = {
 			isa = PBXGroup;
 			children = (
+				B1C3BA081B7C7A4900BD2EC2 /* NotificationCenter.framework */,
 				B1C3B9DC1B7C48FF00BD2EC2 /* mayopop-the-app */,
 				B1C3B9F21B7C48FF00BD2EC2 /* mayopop-the-appTests */,
 				B1C3B9DB1B7C48FF00BD2EC2 /* Products */,

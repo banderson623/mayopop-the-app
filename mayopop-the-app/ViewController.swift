@@ -96,6 +96,9 @@ class ViewController: UIViewController, UIWebViewDelegate {
           myMayoRecipe.onStepChange(arguments[0])
           executeJS("console.log(\"got it\")")
           break
+        case "remindMe":
+          scheduleReminder(arguments[0], message: arguments[1]);
+          break
         case "log":
           println("console.log \(arguments)")
           break
@@ -110,6 +113,15 @@ class ViewController: UIViewController, UIWebViewDelegate {
       return true
   }
 
+  func scheduleReminder(timeInSeconds: String, message: String){
+    println("sending message \(message) in \(timeInSeconds)");
+    let seconds = NSTimeInterval(timeInSeconds.toInt()!)
+    var notification = UILocalNotification()
+    notification.timeZone = NSTimeZone.defaultTimeZone()
+    notification.fireDate = NSDate(timeIntervalSinceNow: seconds)
+    notification.alertBody = message;
+    UIApplication.sharedApplication().scheduleLocalNotification(notification)
+  }
 
 }
 
